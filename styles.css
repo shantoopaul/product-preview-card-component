@@ -1,4 +1,161 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  /* 2. Remove default margin */
+  margin: 0;
+  /* 4. Add accessible line-height */
+  line-height: calc(1em + 0.5rem);
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+button {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
 h1 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1 {
+  text-wrap: balance;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0); /* Legacy property for Internet Explorer */
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  background-color: hsl(30, 38%, 92%);
+}
+
+main {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  padding-inline: 1rem;
+  height: 100dvh;
+}
+
+article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  max-width: clamp(342px, (100vw - (48rem - 1px)) * 999, 600px);
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: clamp(1.5rem, (100vw - (48rem - 1px)) * 999, 2rem);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.product-type {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  padding-block-end: clamp(0.75rem, (100vw - (48rem - 1px)) * 999, 1rem);
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: hsl(212, 21%, 14%);
+  line-height: 1;
+  font-weight: 700;
+  padding-block-end: clamp(1rem, (100vw - (48rem - 1px)) * 999, 1.5rem);
+}
+
+p {
+  padding-block-end: clamp(1.5rem, (100vw - (48rem - 1px)) * 999, 2rem);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  margin-block-end: 1rem;
+}
+
+.discount-price {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
   color: hsl(158, 36%, 37%);
+  font-weight: 700;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  padding-block: 0.75rem;
+  margin-block-start: auto;
+  cursor: pointer;
+}
+button:hover {
+  background-color: hsl(158, 42%, 18%);
+}
+button:focus {
+  outline: 2px solid hsl(158, 36%, 37%);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  button {
+    transition: background-color 0.3s ease-in-out;
+  }
 }/*# sourceMappingURL=styles.css.map */

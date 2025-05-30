@@ -1,6 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import './reset';
 @import './variables';
 
+.visually-hidden:not(:focus):not(:active) {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0); /* Legacy property for Internet Explorer */
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+body {
+	font-family: $font-montserrat;
+	font-size: $text-14;
+	font-weight: $font-medium;
+	color: $grey;
+	background-color: $cream;
+}
+
+main {
+	display: grid;
+	place-items: center;
+	place-content: center;
+	padding-inline: $s-16;
+	height: 100dvh;
+}
+
+article {
+	display: grid;
+	grid-template-columns: $grid-columns;
+
+	max-width: $width;
+	margin: 0 auto;
+	border-radius: $high-radius;
+	overflow: hidden;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: $s-24-32;
+	background-color: $white;
+}
+
+.product-type {
+	display: inline-block;
+	font-size: $text-12;
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+	padding-block-end: $s-12-16;
+}
+
 h1 {
+	font-family: $font-fraunces;
+	font-size: $text-32;
+	color: $black;
+	line-height: 1;
+	font-weight: $font-bold;
+	padding-block-end: $s-16-24;
+}
+
+p {
+	padding-block-end: $s-24-32;
+}
+
+.price {
+	display: flex;
+	align-items: center;
+	column-gap: $s-16;
+	margin-block-end: $s-16;
+}
+
+.discount-price {
+	font-family: $font-fraunces;
+	font-size: $text-32;
 	color: $green-500;
+	font-weight: $font-bold;
+}
+
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: $s-12;
+	font-weight: $font-semibold;
+	border: none;
+	border-radius: $low-radius;
+	color: $white;
+	background-color: $green-500;
+	padding-block: $s-12;
+	margin-block-start: auto;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $green-700;
+	}
+	&:focus {
+		outline: 2px solid $green-500;
+		outline-offset: 2px;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	button {
+		transition: background-color 0.3s ease-in-out;
+	}
 }
