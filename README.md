@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/responsive-product-preview-card-component-without-media-queries-1VJfcFjFeQ)
 - Live Site URL: [Product preview card component solution](https://shantoopaul.github.io/product-preview-card-component/)
 
 ## My process
