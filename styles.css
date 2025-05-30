@@ -19,11 +19,6 @@
     interpolate-size: allow-keywords;
   }
 }
-body {
-  /* 5. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
-}
-
 /* 6. Improve media defaults */
 img,
 picture {
@@ -68,6 +63,8 @@ body {
   font-weight: 500;
   color: hsl(228, 12%, 48%);
   background-color: hsl(30, 38%, 92%);
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
 }
 
 main {

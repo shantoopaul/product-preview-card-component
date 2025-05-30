@@ -19,6 +19,9 @@ body {
 	font-weight: $font-medium;
 	color: $grey;
 	background-color: $cream;
+
+	/* 5. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
 }
 
 main {
